@@ -7,13 +7,31 @@
 $(call inherit-product, device/xiaomi/lisa/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/alpha/config/common_full_phone.mk)
 
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := lisa
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := 2109119DG
-PRODUCT_NAME := lineage_lisa
+PRODUCT_NAME := alpha_lisa
+
+PRODUCT_HOTWORD_BUILD := true
+# Device config
+TARGET_HAS_UDFPS := false
+TARGET_ENABLE_BLUR := false
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+# Build Config
+TARGET_BUILD_PACKAGE := 3
+TARGET_INCLUDE_PIXEL_LAUNCHER := false
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+# Maintainer
+ALPHA_BUILD_TYPE := Official
+ALPHA_MAINTAINER := Termux
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
