@@ -7,13 +7,25 @@
 $(call inherit-product, device/xiaomi/lisa/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := lisa
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := 2109119DG
-PRODUCT_NAME := lineage_lisa
+PRODUCT_NAME := infinity_lisa
+
+# Boot Animaton
+TARGET_BOOT_ANIMATION_RES := 1080
+
+WITH_GAPPS := true
+INFINITY_MAINTAINER := Termux
+INFINITY_BUILD_TYPE := UNOFFICIAL
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_BLUR := true
+BYPASS_CHARGE_SUPPORTED := true
+TARGET_DISABLE_EPPE := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
