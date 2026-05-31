@@ -9,6 +9,9 @@ $(call inherit-product, device/xiaomi/sm8350-common/common.mk)
 # Inherit MiuiCamera Makefile
 $(call inherit-product, vendor/xiaomi/miuicamera-lisa/device.mk)
 
+# Inherit Viperfx 
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
 # Overlays
 PRODUCT_PACKAGES += \
     ApertureOverlayLisa
